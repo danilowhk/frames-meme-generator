@@ -19,7 +19,7 @@ app.frame('/', (c) => {
   const fruit = inputText || buttonValue
   return c.res({
     action: "/picker",
-    image: "http://localhost:3000/meme1.jpeg",
+    image: "https://frames-meme-generator.vercel.app/meme1.jpeg",
     imageAspectRatio: '1:1',
     intents: [
       <TextInput placeholder="Enter custom fruit..." />,
@@ -37,7 +37,7 @@ app.frame('/picker', (c) => {
   if (buttonValue == "A"){
     return c.res({
       action: '/meme/a',
-      image: "http://localhost:3000/meme2.jpeg",
+      image: "https://frames-meme-generator.vercel.app/meme2.jpeg",
       imageAspectRatio: '1:1',
       intents: [
         <TextInput placeholder="Enter custom fruit..." />,
@@ -49,7 +49,7 @@ app.frame('/picker', (c) => {
 
   return c.res({
     action: '/meme/b',
-    image: "http://localhost:3000/meme3.jpeg",
+    image: "https://frames-meme-generator.vercel.app/meme3.jpeg",
     imageAspectRatio: '1:1',
     intents: [
       <TextInput placeholder="Enter custom fruit..." />,
@@ -72,11 +72,11 @@ app.frame('/meme/:id', (c) => {
 
   if (id == "a"){
     return c.res({
-      image: `http://localhost:3000/meme/a?${newSearchParams}`,
+      image: `https://frames-meme-generator.vercel.app/meme/a?${newSearchParams}`,
     })
   }
   return c.res({
-    image: `http://localhost:3000/meme/b?${newSearchParams}`,
+    image: `https://frames-meme-generator.vercel.app/meme/b?${newSearchParams}`,
   })
 
   // return c.res({
